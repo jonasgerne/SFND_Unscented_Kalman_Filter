@@ -1,6 +1,7 @@
 #ifndef UKF_H
 #define UKF_H
 
+#include <vector>
 #include "Eigen/Dense"
 #include "measurement_package.h"
 
@@ -40,7 +41,6 @@ class UKF {
    * @param meas_package The measurement at k+1
    */
   void UpdateRadar(const MeasurementPackage& meas_package);
-
 
   // initially set to false, set to true in first call of ProcessMeasurement
   bool is_initialized_;
